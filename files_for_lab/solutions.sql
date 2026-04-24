@@ -34,7 +34,10 @@ order by status;
 --Query 5
 --What is the loan_id of the highest payment received in the loan table?
 
-SELECT 
+SELECT loan_id 
+from loan
+order by payments desc
+limit 1;
 
 
 --Query 6
