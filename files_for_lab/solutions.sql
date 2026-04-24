@@ -96,6 +96,14 @@ WHERE district_id < 10
 group by district_id
 order by district_id asc;
 
+--Query 14
+--In the card table, how many cards exist for each type? Rank the result starting with the most frequent type.
+
+SELECT type, COUNT(*)
+FROM card
+GROUP BY type
+ORDER BY COUNT(*) DESC;
+
 
 --Query 15
 --Using the loan table, print the top 10 account_ids based on the sum of all of their loan amounts.
@@ -133,4 +141,4 @@ SELECT account_id, type, sum(amount) as total_amount
 FROM trans
 WHERE account_id = 396
 group by type
-order by amount;
+order by type;
